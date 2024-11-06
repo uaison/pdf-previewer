@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <title>pdf-viewer</title>
+  <script src="../lib/pdf-viewer.min.js"></script>
+</head>
+
+<body style="background-color: #f0f0f5">
+  <div class="preview"></div>
+  <script>
+    const pdf = new pdfViewer({
+      url:'https://501351981.github.io/vue-office/examples/dist/static/test-files/test.pdf',
+      workerSrc: '/pdf-viewer/lib/pdfjs-dist/pdf.worker.min.js',
+      cMapUrl: '/pdf-viewer/lib/pdfjs-dist/cmaps/'
+    })
+    pdf.preview('.preview')
+  </script>
+</body>
+
+</html>
